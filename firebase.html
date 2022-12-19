@@ -94,5 +94,109 @@
                 BACK </button>
         </div>
     </div>
+
+
+
+    <script type="text/javascript">
+		let inputName = document.getElementById('name').value;
+		let leng1 = inputName.length;
+		let inputEmail = document.getElementById('email').value;
+		let leng2 = inputEmail.length;
+		let inputPhone = document.getElementById('phone').value;
+		let leng3 = inputPhone.length;
+		let inputMessage = document.getElementById('message').value;
+		let leng4 = inputMessage.length;
+		function myFunction(inputtxt) {
+			let phoneno = /^\d{10}$/;
+			if (inputtxt.value.match(phoneno)){ return true;
+			  }
+			else {
+				alert("Phone Number must be 10 digit number only");
+				return false;
+			}
+		}
+
+		// $(document).ready(function () {
+
+		// 	// A static mask
+		// 	$('#phone').mask("+99-9999999999");
+
+		// 	// Mask which specifies options
+		// 	//$(selector).inputmask({ "mask": "+99-9999999999" });
+		// });
+		$(document).ready(function () {
+			// document.getElementsById('productTable').style.display='none';
+		});
+		let myForm = document.getElementById('myContactForm');
+
+		$("input").on("keypress", function (e) {
+			if (e.which === 32 && !this.value.length)
+				e.preventDefault();
+		});
+		// $("#phone").on("keypress", function (e) {
+		// 	if (e.which >= 48 && e.which <= 53 && !this.value.length)
+		// 		e.preventDefault();
+		// });
+		$("textarea").on("keypress", function (e) {
+			if (e.which === 32 && !this.value.length)
+				e.preventDefault();
+		});
+		// inputsearch==' '?document.getElementById('search').disabled=true:document.getElementById('search').disabled=false;
+		myback = () => {
+			inputName = ''; inputEmail = ''; inputPhone = ''; inputMessage = '';
+			// myForm
+			location.reload();
+
+		}
+		const ul = document.getElementById('authors');
+		//const list = document.createDocumentFragment();
+		$("#myContactForm").submit(function (e) {
+
+			e.preventDefault();
+			// $('#backbtn').append="GO BACK" ;
+			console.log(inputEmail, inputMessage, inputName, inputPhone);
+			const url = 'https://exceptionalpanaceasolutions.com/Angular/insert1.php';
+
+			let data1 = {
+				name: inputName,
+				email: inputEmail,
+				phone: inputPhone,
+				message: inputMessage
+			}
+
+			let fetchData = {
+				method: 'POST',
+				body: JSON.stringify(data1),
+				headers: new Headers({
+					'Content-Type': 'application/json; charset=UTF-8'
+				})
+			}
+			fetch(url, fetchData)
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					console.log(data.success);
+					let message = data.success;
+					//alert(message)
+					//let len = data.length;
+					//console.log(len);
+					//len > 0 ? $('#empcount').append(len + "Matched  Employee Found.") : $('#empcount').append("No Matched Employee Found. \n Please Try Again ");
+					message === true ? myForm.remove() : !myForm.remove();
+					message === true ? $('#success').append('Thanks For Contacting Us. \n Your Contact Details is submitted.') :
+						$('#success').append('OOps..Something went Wrong! \n Please Try again.')
+
+				}).
+				catch(function (error) {
+					console.log(error);
+					if (error) myForm.remove();
+					if (error) $('#success').append('OOps..Something went Wrong! \n Please Try again.');
+					//alert(error)
+				});
+			//inputsearch = '';
+
+		});
+
+	</script>
 </body>
 </html>
