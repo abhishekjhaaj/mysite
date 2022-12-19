@@ -36,9 +36,63 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="mailto:exceptionalpanaceasolutions@gmail.com" method="post">
-    name: <input type="email" name="email" id="email">
-      <button type="submit">Submit</button>
-    </form>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="contact-form">
+            <h3 style="color: darkgoldenrod;"><i class="fas fa-envelope-open"></i> Leave
+                a
+                Message
+            </h3>
+            <div class="row">
+
+                <form id="myContactForm" name="form1" action="mailto:exceptionalpanaceasolutions@gmail.com">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label for="name">Name:</label>
+                        <input type="text" onfocus="" id="name" name="name"
+                            placeholder="Name (required)" maxlength="50" minlength="4"
+                            required>
+                        <!-- <p style="color:red"><span *ngIf="name.invalid && name.touched">Name Required</span></p> -->
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label for="email">Email:</label>
+                        <input onfocus="this.value=''" name="email" id="email"
+                            type="email" email placeholder="Email (required)" danger
+                            required />
+                        <!-- <p style="color:red"><span *ngIf="email.invalid && email.touched">Email Required like someone@gmail.com</span></p> -->
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label for="phone">Phone:</label>
+                        <input name="phone" onfocus="" id="phone" type="text"
+                            placeholder="9999999999" minlength="10" maxlength="10"
+                            onchange="myFunction(document.form1.phone)" required />
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label for="message">Message:</label>
+                        <textarea name="message" onfocus="" id="message" cols="30"
+                            rows="10" placeholder="Message(required)" maxlength="500"
+                            required>
+      </textarea>
+
+
+
+                        <button id="submitForm" type="submit">Submit Details</button>
+                        <button type="reset">Reset</button>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+        <div class="container" style="margin-bottom: 20px; padding-bottom: 30px;">
+            <h1 id="success"></h1>
+            <button class="primary fa fa-backward " id="backbtn" onclick="myback()">GO
+                BACK </button>
+        </div>
+    </div>
 </body>
 </html>
