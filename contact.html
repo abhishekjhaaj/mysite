@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Google Fonts -->
+	<!-- <link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/> -->
+	<!-- <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js”></script> -->
+	<style>
+
+	</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+	<!-- <script src="js/searchemp.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+		integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+
+	<!-- Required for using jQuery maskedinput plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js">
+	</script>
+	<style>
+		* {
+			padding: 0%;
+			margin: 0%;
+			font-family: cursive;
+		}
+	</style>
+	<title>Exceptional Panacea Solutions|Contact Us</title>
+
+</head>
+
+<body style="background-color:#5e5b5b ;">
+	<!--#efe4e4 #5e5b5b #d7d7d5" -->
+
+	<nav class="navbar1">
+		<div class="logo">
+			<a href="#"><img src="images/logo.png" height="70px" alt="" width="130" />
+				<p class="animate-charcter">eXCEPTIONAL panacea solutions</p>
+			</a>
+		</div>
+		<ul class="nav-list" id="nav-list">
+			<li class="list"><a class="fas fa-home" href="index.html" active> Home</a></li>
+			<li class="list fa fa-about"><a class="fas fa-question-circle" href="about.html"> About Us</a></li>
+			<li class="list "><a class="fa fa-contact-card" href="#" active> Contact Us</a></li>
+			<li class="list "> <a class=" fas fa-search" href="search.html">
+					Employee verification
+				</a></li>
+			<li class="list ">
+				<a class="material-icons" href="#" id="demo-button" style="cursor:not-allowed;">&#xe41b; DEMO</a>
+			</li>
+		</ul>
+		<!-- The Modal -->
+		<!-- <div id="myModal" class="modal">
+
+       Modal content
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="mesg"></p>
+      </div>
+
+    </div> -->
+
+
+
+		<span class="menu" id="toggle-button">
+			<div class="menu-line1"></div>
+			<div class="menu-line2"></div>
+			<div class="menu-line3"></div>
+
+
+		</span>
+	</nav>
+	<script>
+		// const drop_down=document.getElementById('demo-button');
+		// drop_down.addEventListener('mousehover',()=>{
+		//   document.getElementById('demo-button').style.text;
+		// })
+		const toggleButton = document.getElementById('toggle-button');
+		const navList = document.getElementById('nav-list');
+		toggleButton.addEventListener('click', () => {
+			navList.classList.toggle('active');
+		});
+
+
+
+	</script>
+	<!-- <hr /> -->
+
+	<div class="container" style="margin-top: 10px; background-color: rgb(240, 213, 177);">
+
+		<div class="container-fluid" style="
+        background-position: center; background-repeat: no-repeat; margin: 1px; height: 250px;
+        width: 100%; background-image: url('images//uploads/maxresdefault.jpg'); filter:blur(0);">
+			<h1 style="text-align:center; margin-top: 1px;">
+				<font size="60" color="white">CONTACTUS</font>
+			</h1>
+		</div>
+		<div style="background-color: #e0e0e0;">
+			<section class="about" id="about">
+				<div class="container-fluid" style="margin:auto;marginTop: 0px;">
+					<div class="row">
+						<div class="head_title "
+							style="background-image: url(../../../assets/images/uploads/maxresdefault.jpg);">
+
+							<!-- <h1 style={{ textAlign: "center", marginTop: 100 }}> -->
+							<font size="60" color="white">
+								<h1 style="text-align: center; margin-top: 100;"></h1>
+							</font>
+						</div>
+
+
+
+						<div class="contact-area">
+							<div class="container">
+								<div class="row">
+									<!-- contact-info start -->
+									<div class="col-md-6 col-sm-12 col-xs-12">
+										<div>
+											<h3 style="color: darkgoldenrod;"><i class="fas fa-contact-book"></i>
+												Contact info</h3>
+											<hr />
+											<ul>
+												<li>
+													<i class="fa fa-map-marker"></i> <strong>Address : </strong>
+													<p>Exceptional Panacea Solutions ,
+														D-303, Vraj Residency
+														Near Air Force Station, Makarpura Road,
+														Baroda-390014. </p>
+
+												</li>
+												<hr />
+												<li>
+													<i class="fa fa-phone"></i> <strong>Phone : </strong>
+													+91-7990583390 / +91-8788513923
+												</li>
+												<hr />
+												<li>
+													<i class="fa fa-envelope"></i> <strong>Email : </strong>
+													<a
+														href="mailto:info@exceptionalpanaceasolutions.com">info@exceptionalpanaceasolutions.com</a>
+												</li>
+												<hr />
+											</ul>
+										</div>
+									</div>
+									<!-- contact-info end -->
+									<div class="col-md-6 col-sm-12 col-xs-12">
+										<div class="contact-form">
+											<h3 style="color: darkgoldenrod;"><i class="fas fa-envelope-open"></i> Leave
+												a
+												Message
+											</h3>
+											<div class="row">
+
+												<form id="myContactForm" name="form1">
+													<div class="col-md-6 col-sm-6 col-xs-12">
+														<label for="name">Name:</label>
+														<input type="text" onfocus="" id="name" name="name"
+															placeholder="Name (required)" maxlength="50" minlength="4"
+															required>
+														<!-- <p style="color:red"><span *ngIf="name.invalid && name.touched">Name Required</span></p> -->
+													</div>
+													<div class="col-md-6 col-sm-6 col-xs-12">
+														<label for="email">Email:</label>
+														<input onfocus="this.value=''" name="email" id="email"
+															type="email" email placeholder="Email (required)" danger
+															required />
+														<!-- <p style="color:red"><span *ngIf="email.invalid && email.touched">Email Required like someone@gmail.com</span></p> -->
+
+													</div>
+													<div class="col-md-6 col-sm-6 col-xs-6">
+														<label for="phone">Phone:</label>
+														<input name="phone" onfocus="" id="phone" type="text"
+															placeholder="9999999999" minlength="10" maxlength="10"
+															onchange="myFunction(document.form1.phone)" required />
+
+													</div>
+													<div class="col-md-6 col-sm-6 col-xs-6">
+														<label for="message">Message:</label>
+														<textarea name="message" onfocus="" id="message" cols="30"
+															rows="10" placeholder="Message(required)" maxlength="500"
+															required>
+									  </textarea>
+
+
+
+														<button id="submitForm" type="submit">Submit Details</button>
+														<button type="reset">Reset</button>
+													</div>
+
+
+
+												</form>
+
+											</div>
+
+
+										</div>
+										<div class="container" style="margin-bottom: 20px; padding-bottom: 30px;">
+											<h1 id="success"></h1>
+											<button class="primary fa fa-backward " id="backbtn" onclick="myback()">GO
+												BACK </button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-12">
+
+
+						<div class="map">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.3030590888907!2d73.18317751440193!3d22.22857738536093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc58d3a41d8e9%3A0x2c0d19b26c6b2ef!2sExceptional%20Panacea%20Solutions!5e0!3m2!1sen!2sin!4v1638129935046!5m2!1sen!2sin"
+								width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="trial" class="trial text-center wow fadeIn" data-wow-duration="2s" data-wow-dealy="1.5s">
+				<div class="main_trial_area">
+					<div class="container">
+						<div class="row">
+							<div class="main_trial">
+								<div class="col-md-12">
+									<h2><span>OUR GOAL</span> </h2>
+									<p>Our goal is to give you the best experience and to let your company grow on web
+										so that you can
+										let go all your worries and enjoy the moment. We focus on optimized web solution
+										so when you
+										flip the chapters of your life, you realize what you were feeling or what you
+										did at the same time.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+
+
+
+
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4 pb-0">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a mdbRipple class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;"
+					href="https://www.facebook.com/exceptionalpaneceasolutions/" role="button"><i
+						class="fab fa-facebook-f"></i></a>
+
+				<!-- Twitter -->
+				<!-- <a
+          mdbRipple
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #55acee;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a> -->
+
+				<!-- Google -->
+				<a mdbRipple class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+					role="button"><i class="fab fa-google"></i></a>
+
+				<!-- Instagram -->
+				<a mdbRipple class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+					role="button"><i class="fab fa-instagram"></i></a>
+
+				<!-- Linkedin -->
+				<a mdbRipple class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;"
+					href="https://in.linkedin.com/company/exceptional-panacea-solutions" role="button"><i
+						class="fab fa-linkedin-in"></i></a>
+				<!-- Github -->
+				<!-- <a
+          mdbRipple
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #333333;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a> -->
+			</section>
+			<!-- Section: Social media -->
+		</div>
+		<!-- Grid container -->
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2018 Copyright:
+			<a class="text-white" href="https://exceptionalapanaceasolutions.com/">Exceptional Panacea Solutions</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<!--  Bootstrap Bundle with Popper -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+	<!-- Separate Popper and Bootstrap JS -->
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+
+
+	<!-- Required JavaScript Libraries -->
+
+
+	<!-- <script type="text/javascript"> $('#myModal').modal('show')</script> -->
+
+	<script type="text/javascript">
+		let inputName = document.getElementById('name').value;
+		let leng1 = inputName.length;
+		let inputEmail = document.getElementById('email').value;
+		let leng2 = inputEmail.length;
+		let inputPhone = document.getElementById('phone').value;
+		let leng3 = inputPhone.length;
+		let inputMessage = document.getElementById('message').value;
+		let leng4 = inputMessage.length;
+		function myFunction(inputtxt) {
+			let phoneno = /^\d{10}$/;
+			if (inputtxt.value.match(phoneno)){ return true;
+			  }
+			else {
+				alert("Phone Number must be 10 digit number only");
+				return false;
+			}
+		}
+
+		// $(document).ready(function () {
+
+		// 	// A static mask
+		// 	$('#phone').mask("+99-9999999999");
+
+		// 	// Mask which specifies options
+		// 	//$(selector).inputmask({ "mask": "+99-9999999999" });
+		// });
+		$(document).ready(function () {
+			// document.getElementsById('productTable').style.display='none';
+		});
+		let myForm = document.getElementById('myContactForm');
+
+		$("input").on("keypress", function (e) {
+			if (e.which === 32 && !this.value.length)
+				e.preventDefault();
+		});
+		// $("#phone").on("keypress", function (e) {
+		// 	if (e.which >= 48 && e.which <= 53 && !this.value.length)
+		// 		e.preventDefault();
+		// });
+		$("textarea").on("keypress", function (e) {
+			if (e.which === 32 && !this.value.length)
+				e.preventDefault();
+		});
+		// inputsearch==' '?document.getElementById('search').disabled=true:document.getElementById('search').disabled=false;
+		myback = () => {
+			inputName = ''; inputEmail = ''; inputPhone = ''; inputMessage = '';
+			// myForm
+			location.reload();
+
+		}
+		const ul = document.getElementById('authors');
+		//const list = document.createDocumentFragment();
+		$("#myContactForm").submit(function (e) {
+
+			e.preventDefault();
+			// $('#backbtn').append="GO BACK" ;
+			console.log(inputEmail, inputMessage, inputName, inputPhone);
+			const url = 'https://exceptionalpanaceasolutions.com/Angular/insert1.php';
+
+			let data1 = {
+				name: inputName,
+				email: inputEmail,
+				phone: inputPhone,
+				message: inputMessage
+			}
+
+			let fetchData = {
+				method: 'POST',
+				body: JSON.stringify(data1),
+				headers: new Headers({
+					'Content-Type': 'application/json; charset=UTF-8'
+				})
+			}
+			fetch(url, fetchData)
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					console.log(data.success);
+					let message = data.success;
+					//alert(message)
+					//let len = data.length;
+					//console.log(len);
+					//len > 0 ? $('#empcount').append(len + "Matched  Employee Found.") : $('#empcount').append("No Matched Employee Found. \n Please Try Again ");
+					message === true ? myForm.remove() : !myForm.remove();
+					message === true ? $('#success').append('Thanks For Contacting Us. \n Your Contact Details is submitted.') :
+						$('#success').append('OOps..Something went Wrong! \n Please Try again.')
+
+				}).
+				catch(function (error) {
+					console.log(error);
+					if (error) myForm.remove();
+					if (error) $('#success').append('OOps..Something went Wrong! \n Please Try again.');
+					//alert(error)
+				});
+			//inputsearch = '';
+
+		});
+
+	</script>
+
+
+
+
+
+</body>
+
+</html>
