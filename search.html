@@ -186,6 +186,7 @@ let data1 = {
       return response.json();
     })
     .then((data) => {
+      alert(data);
       let len = data.length;
       console.log(len);
      len>0? $('#empcount').append(len+ "Matched  Employee Found."):$('#empcount').append("No Matched Employee Found. \n Please Try Again ");
