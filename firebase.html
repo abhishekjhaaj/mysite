@@ -41,7 +41,7 @@
 		dataType: "text", // "xml", "json"
 		success: function(data) {
 			// show text reply as-is (debug)
-			alert(data);
+			console.log(data);
 	
 			// show xml field values (debug)
 			//alert( $(data).find("title").text() );
@@ -54,7 +54,7 @@
 			//alert(str);
 		},
 		error: function(jqXHR, textStatus, ex) {
-			alert(textStatus + "," + ex + "," + jqXHR.responseText);
+			console.log(textStatus + "," + ex + "," + jqXHR.responseText);
 		}
 	});
 
