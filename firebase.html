@@ -36,167 +36,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="col-md-6 col-sm-12 col-xs-12">
-        <div class="contact-form">
-            <h3 style="color: darkgoldenrod;"><i class="fas fa-envelope-open"></i> Leave
-                a
-                Message
-            </h3>
-            <div class="row">
-
-                <form id="myContactForm" name="form1" action="mailto:exceptionalpanaceasolutions@gmail.com">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <label for="name">Name:</label>
-                        <input type="text" onfocus="" id="name" name="name"
-                            placeholder="Name (required)" maxlength="50" minlength="4"
-                            required>
-                        <!-- <p style="color:red"><span *ngIf="name.invalid && name.touched">Name Required</span></p> -->
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <label for="email">Email:</label>
-                        <input onfocus="this.value=''" name="email" id="email"
-                            type="email" email placeholder="Email (required)" danger
-                            required />
-                        <!-- <p style="color:red"><span *ngIf="email.invalid && email.touched">Email Required like someone@gmail.com</span></p> -->
-
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <label for="phone">Phone:</label>
-                        <input name="phone" onfocus="" id="phone" type="text"
-                            placeholder="9999999999" minlength="10" maxlength="10"
-                            onchange="myFunction(document.form1.phone)" required />
-
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <label for="message">Message:</label>
-                        <textarea name="message" onfocus="" id="message" cols="30"
-                            rows="10" placeholder="Message(required)" maxlength="500"
-                            required>
-      </textarea>
-
-
-
-                        <button id="submitForm" type="submit">Submit Details</button>
-                        <button type="reset">Reset</button>
-                    </div>
-
-
-
-                </form>
-
-            </div>
-
-
-        </div>
-        <div class="container" style="margin-bottom: 20px; padding-bottom: 30px;">
-            <h1 id="success"></h1>
-            <button class="primary fa fa-backward " id="backbtn" onclick="myback()">GO
-                BACK </button>
-        </div>
-    </div>
-
-
-
-    <script type="text/javascript">
-		let inputName = document.getElementById('name').value;
-		let leng1 = inputName.length;
-		let inputEmail = document.getElementById('email').value;
-		let leng2 = inputEmail.length;
-		let inputPhone = document.getElementById('phone').value;
-		let leng3 = inputPhone.length;
-		let inputMessage = document.getElementById('message').value;
-		let leng4 = inputMessage.length;
-		function myFunction(inputtxt) {
-			let phoneno = /^\d{10}$/;
-			if (inputtxt.value.match(phoneno)){ return true;
-			  }
-			else {
-				alert("Phone Number must be 10 digit number only");
-				return false;
-			}
+	jQuery.support.cors = true;
+	$.ajax({
+		url: "http://exceptionalapanaceasolutions.000webhostapp.com/view.php",
+		data: {  },
+		type: "GET",
+		timeout: 30000,
+		dataType: "text", // "xml", "json"
+		success: function(data) {
+			// show text reply as-is (debug)
+			alert(data);
+	
+			// show xml field values (debug)
+			//alert( $(data).find("title").text() );
+	
+			// loop JSON array (debug)
+			//var str="";
+			//$.each(data.items, function(i,item) {
+			//  str += item.title + "\n";
+			//});
+			//alert(str);
+		},
+		error: function(jqXHR, textStatus, ex) {
+			alert(textStatus + "," + ex + "," + jqXHR.responseText);
 		}
+	});
 
-		// $(document).ready(function () {
 
-		// 	// A static mask
-		// 	$('#phone').mask("+99-9999999999");
-
-		// 	// Mask which specifies options
-		// 	//$(selector).inputmask({ "mask": "+99-9999999999" });
-		// });
-		$(document).ready(function () {
-			// document.getElementsById('productTable').style.display='none';
-		});
-		let myForm = document.getElementById('myContactForm');
-
-		$("input").on("keypress", function (e) {
-			if (e.which === 32 && !this.value.length)
-				e.preventDefault();
-		});
-		// $("#phone").on("keypress", function (e) {
-		// 	if (e.which >= 48 && e.which <= 53 && !this.value.length)
-		// 		e.preventDefault();
-		// });
-		$("textarea").on("keypress", function (e) {
-			if (e.which === 32 && !this.value.length)
-				e.preventDefault();
-		});
-		// inputsearch==' '?document.getElementById('search').disabled=true:document.getElementById('search').disabled=false;
-		myback = () => {
-			inputName = ''; inputEmail = ''; inputPhone = ''; inputMessage = '';
-			// myForm
-			location.reload();
-
-		}
-		const ul = document.getElementById('authors');
-		//const list = document.createDocumentFragment();
-		$("#myContactForm").submit(function (e) {
-
-			e.preventDefault();
-			// $('#backbtn').append="GO BACK" ;
-			console.log(inputEmail, inputMessage, inputName, inputPhone);
-			const url = 'https://files.000webhost.com/insert1.php';
-
-			let data1 = {
-				name: inputName,
-				email: inputEmail,
-				phone: inputPhone,
-				message: inputMessage
-			}
-
-			let fetchData = {
-				method: 'POST',
-				body: JSON.stringify(data1),
-				headers: new Headers({
-					'Content-Type': 'application/json; charset=UTF-8'
-				})
-			}
-			fetch(url, fetchData)
-				.then((response) => {
-					return response.json();
-				})
-				.then((data) => {
-					console.log(data.success);
-					let message = data.success;
-					//alert(message)
-					//let len = data.length;
-					//console.log(len);
-					//len > 0 ? $('#empcount').append(len + "Matched  Employee Found.") : $('#empcount').append("No Matched Employee Found. \n Please Try Again ");
-					message === true ? myForm.remove() : !myForm.remove();
-					message === true ? $('#success').append('Thanks For Contacting Us. \n Your Contact Details is submitted.') :
-						$('#success').append('OOps..Something went Wrong! \n Please Try again.')
-
-				}).
-				catch(function (error) {
-					console.log(error);
-					if (error) myForm.remove();
-					if (error) $('#success').append('OOps..Something went Wrong! \n Please Try again.');
-					//alert(error)
-				});
-			//inputsearch = '';
-
-		});
-
-	</script>
 </body>
 </html>
