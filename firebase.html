@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <script src="js/searchemp.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <!-- <script type="module">
+    <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
@@ -34,32 +34,32 @@
         //console.log(db);
        
 	jQuery.support.cors = true;
-	// $.ajax({
-	// 	url: "https://exceptionalapanaceasolutions.000webhostapp.com/getinfo.php",
-	// 	data: { name:"abhi" },
-	// 	type: "GET",
-	// 	timeout: 30000,
-	// 	dataType: "json", // "xml", "json"
-	// 	success: function(data) {
-	// 		// show text reply as-is (debug)
-	// 		console.log(data);
+	$.ajax({
+		url: "https://exceptionalapanaceasolutions.000webhostapp.com/getinfo.php",
+		data: { name:"abhi" },
+		type: "GET",
+		timeout: 30000,
+		dataType: "json", // "xml", "json"
+		success: function(data) {
+			// show text reply as-is (debug)
+			console.log(data);
 	
-	// 		// show xml field values (debug)
-	// 		//alert( $(data).find("title").text() );
+			// show xml field values (debug)
+			//alert( $(data).find("title").text() );
 	
-	// 		// loop JSON array (debug)
-	// 		//var str="";
-	// 		//$.each(data.items, function(i,item) {
-	// 		//  str += item.title + "\n";
-	// 		//});
-	// 		//alert(str);
-	// 	},
-	// 	error: function(jqXHR, textStatus, ex) {
-	// 		console.log(textStatus + "," + ex + "," + jqXHR.responseText);
-	// 	}
-	// });
+			// loop JSON array (debug)
+			//var str="";
+			//$.each(data.items, function(i,item) {
+			//  str += item.title + "\n";
+			//});
+			//alert(str);
+		},
+		error: function(jqXHR, textStatus, ex) {
+			console.log(textStatus + "," + ex + "," + jqXHR.responseText);
+		}
+	});
 
-</script> -->
+</script> 
     <title>Document</title>
 </head>
 <body>
