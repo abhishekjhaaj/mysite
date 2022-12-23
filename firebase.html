@@ -35,7 +35,7 @@
        
 	jQuery.support.cors = true;
 	$.ajax({
-		url: "https://exceptionalapanaceasolutions.000webhostapp.com/getinfo.php",
+		url: "https://exceptionalpanaceasolutions.000webhostapp.com/getinfo.php",
 		data: { name:"abhi" },
 		type: "GET",
 		timeout: 30000,
@@ -79,6 +79,7 @@ function showHint(str) {
   xhttp.onload = function() {
     document.getElementById("txtHint").innerHTML =
     this.responseText;
+	
   }
   xhttp.open("GET", "https://exceptionalpanaceasolutions.000webhostapp.com/view.php?name="+str);
   
