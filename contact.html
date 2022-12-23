@@ -409,9 +409,9 @@ rel="stylesheet"
 			let fetchData = {
 				method: 'POST',
 				body: JSON.stringify(data1),
-				headers: new Headers({
-					'Content-Type': 'application/json; charset=UTF-8'
-				})
+				// headers: new Headers({
+				// 	'Content-Type': 'application/json; charset=UTF-8'
+				// })
 			}
 			fetch(url, fetchData)
 				.then((response) => {
